@@ -1,0 +1,128 @@
+// New color scheme
+$primary-color: #1e90ff; // Dodger Blue
+$secondary-color: #0a5889; // Light Sky Blue
+$background-color: #f0f8ff; // Alice Blue
+$text-color: #333; // Darker gray for text
+$input-background: #ffffff; // White for inputs
+$button-hover: darken($primary-color, 15%);
+
+
+// Base styling
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: $background-color;
+    color: $text-color;
+}
+
+// App container
+#app {
+    max-width: 1200px;
+    margin: 40px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    // Flexbox to layout form and trip-info side by side
+    .container {
+        display: flex;
+        gap: 20px;
+        width: 100%;
+    }
+
+    // Form styling
+    #travel-form {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    // Trip info container
+    #trip-info {
+        flex: 1;
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+}
+
+// Header
+h1 {
+    text-align: center;
+    color: $primary-color;
+    font-weight: 700;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+// Form styling
+form {
+    display: grid;
+    gap: 15px;
+    width: 100%;
+}
+
+label {
+    font-weight: 500;
+    color: $secondary-color;
+    margin-bottom: 5px;
+}
+
+input {
+    padding: 12px;
+    border: 1px solid $text-color;
+    border-radius: 5px;
+    background-color: $input-background;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: $primary-color;
+    outline: none;
+}
+
+// Button styling
+button {
+    padding: 12px;
+    background-color: $primary-color;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 15px;
+    width: 100%;
+}
+
+button:hover {
+    background-color: $button-hover;
+    transform: translateY(-2px);
+}
+
+// Responsive design
+@media (max-width: 768px) {
+    #app {
+        padding: 20px;
+    }
+
+    .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
