@@ -26,3 +26,6 @@ document.getElementById('travel-form').addEventListener('submit', async (event) 
         alert('Failed to retrieve trip details. Please check your input and try again later.');
     }
 });
+
+
+
